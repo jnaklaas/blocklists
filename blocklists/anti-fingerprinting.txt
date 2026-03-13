@@ -1,0 +1,78 @@
+! Title: Anti Fingerprinting Blocklist
+! Description: Blocks common browser fingerprinting services
+! Version: 2026.03.13 (34 rules)
+! Last modified: 13 Mar 2026 14:22 UTC
+! Homepage: https://github.com/jnaklaas/blocklists
+! License: MIT
+
+! Example rule
+
+! ================================
+! ANTI FINGERPRINTING RULESET
+! ================================
+
+! ----------------
+! Browser fingerprint collectors
+! ----------------
+||fingerprintjs.com^
+||fpjs.io^
+||cdn.fpjs.io^
+||openfpcdn.io^
+||browser-intake-datadoghq.com^
+||cdn.segment.com^
+||api.segment.io^
+
+! ----------------
+! Canvas fingerprinting frameworks
+! ----------------
+||amiunique.org^
+||deviceinfo.me^
+||browserleaks.com^
+||pixelscan.net^
+
+! ----------------
+! Device intelligence services
+! ----------------
+||deviceinfo.io^
+||deviceatlas.com^
+||maxmind.com^
+||ipinfo.io^
+||ip-api.com^
+
+! ----------------
+! Session replay / behavior tracking
+! ----------------
+||fullstory.com^
+||hotjar.com^
+||static.hotjar.com^
+||mouseflow.com^
+||luckyorange.com^
+
+! ----------------
+! Behavioral analytics
+! ----------------
+||clarity.ms^
+||cdn.clarity.ms^
+||logrocket.com^
+||cdn.logrocket.io^
+
+! ----------------
+! Advanced tracking CDNs
+! ----------------
+||cdn.segment.io^
+||api.mixpanel.com^
+||cdn.mxpnl.com^
+
+! ----------------
+! Tracking beacons
+! ----------------
+||/collect?$third-party
+||/track?$third-party
+||/tracking?$third-party
+||/telemetry?$third-party
+||/beacon?$third-party
+
+! ----------------
+! 3rd party fonts
+! ----------------
+*$font,third-party

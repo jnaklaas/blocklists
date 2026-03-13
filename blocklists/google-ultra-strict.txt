@@ -1,0 +1,143 @@
+! Title: Google Ultra Strict Blocklist
+! Description: Blocks Google ads, telemetry, analytics, YouTube tracking, Recaptcha and CDN tracking.
+! Version: 2026.03.13 (68 rules)
+! Last modified: 13 Mar 2026 14:22 UTC
+! Homepage: https://github.com/jnaklaas/blocklists
+! License: MIT
+
+! ================================
+! ULTRA STRICT GOOGLE BLOCKLIST
+! ================================
+
+! ----------------
+! Google Ads / DoubleClick
+! ----------------
+||doubleclick.net^
+||g.doubleclick.net^
+||googleads.g.doubleclick.net^
+||static.doubleclick.net^
+||partnerad.l.doubleclick.net^
+||googlesyndication.com^
+||pagead2.googlesyndication.com^
+||tpc.googlesyndication.com^
+||google.com/pagead^
+||google.com/ads^
+||google.com/adsense^
+||googleadservices.com^
+||adservice.google.com^
+
+! ----------------
+! Google Analytics / Marketing
+! ----------------
+||google-analytics.com^
+||ssl.google-analytics.com^
+||www.google-analytics.com^
+||googletagmanager.com^
+||www.googletagmanager.com^
+||googletagservices.com^
+||googleoptimize.com^
+||analytics.google.com^
+||marketingplatform.google.com^
+
+! ----------------
+! Google telemetry APIs
+! ----------------
+||jnn-pa.googleapis.com^
+||play.googleapis.com^
+||clients1.google.com^
+||clients2.google.com^
+||clients3.google.com^
+||clients4.google.com^
+||clients5.google.com^
+||clients6.google.com^
+||android.clients.google.com^
+
+! ----------------
+! Metrics / device telemetry
+! ----------------
+||clientmetrics.googleapis.com^
+||metrics.gstatic.com^
+||beacons.gvt2.com^
+
+! ----------------
+! Connectivity checks
+! ----------------
+||connectivitycheck.gstatic.com^
+||generate_204^
+
+! ----------------
+! Google CDN libraries
+! ----------------
+||ajax.googleapis.com^
+||commondatastorage.googleapis.com^
+
+! ----------------
+! Google Fonts
+! ----------------
+||fonts.googleapis.com^
+||fonts.gstatic.com^
+! Allow Google Fonts on Google Domains
+@@||fonts.googleapis.com^$domain=google.com
+@@||fonts.gstatic.com^$domain=google.com
+
+! ----------------
+! Google Maps
+! ----------------
+||maps.googleapis.com^
+||maps.gstatic.com^
+||maps.google.com/maps^
+
+! ----------------
+! Google user content
+! ----------------
+||googleusercontent.com^$third-party
+||gvt1.com^
+||gvt2.com^
+
+! ----------------
+! YouTube telemetry
+! ----------------
+||youtube.com/api/stats^
+||youtube.com/youtubei/v1/log_event^
+||youtube.com/youtubei/v1/att^
+||youtube.com/ptracking^
+||youtube.com/get_video_info^
+||youtube.com/generate_204^
+
+! ----------------
+! YouTube ads
+! ----------------
+||youtube.com/pagead^
+||youtube.com/get_midroll_info^
+
+! ----------------
+! Googlevideo metrics
+! ----------------
+||googlevideo.com^
+||googlevideo.com/api/stats^
+
+! ----------------
+! YouTube identity images
+! ----------------
+||yt3.ggpht.com^$third-party
+||yt4.ggpht.com^$third-party
+
+! ----------------
+! Optional strict blocking
+! ----------------
+||googleapis.com^$third-party
+||gstatic.com^$third-party
+||google.com^$third-party
+
+! ----------------
+! YouTube embed click-to-load
+! ----------------
+||youtube.com/embed/$3p,frame,redirect=noopframe
+||youtube-nocookie.com/embed/$3p,frame,redirect=noopframe
+
+! ----------------
+! Google Recaptcha
+! ----------------
+||gstatic.com/recaptcha^$important
+||google.com/recaptcha^$important
+||recaptcha.net^$important
