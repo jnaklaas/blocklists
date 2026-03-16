@@ -62,6 +62,37 @@ TMP_ENTRY=$(mktemp)
 			REMOVED=$(git diff HEAD --unified=0 -- "$file" | grep '^-' | grep -vE '^\-\s*!|^\-\s*$|^\-\-\- ' | sed 's/^-//')
 		fi
 
+		# Strip trailing whitespace en verwijder regels die in beide staan
+		if [ -n "$ADDED" ] && [ -n "$REMOVED" ]; then
+			# maak arrays van de regels
+			mapfile -t ADDED_ARR <<< "$ADDED"
+			mapfile -t REMOVED_ARR <<< "$REMOVED"
+
+			# tijdelijke arrays
+			NEW_ADDED=()
+			NEW_REMOVED=()
+
+			# voeg alleen toe aan NEW_ADDED als regel niet in REMOVED zit
+			for line in "${ADDED_ARR[@]}"; do
+				clean_line="$(echo -e "${line}" | sed 's/[[:space:]]*$//')"
+				if ! printf '%s\n' "${REMOVED_ARR[@]}" | grep -Fxq "$clean_line"; then
+					NEW_ADDED+=("$line")
+				fi
+			done
+
+			# voeg alleen toe aan NEW_REMOVED als regel niet in ADDED zit
+			for line in "${REMOVED_ARR[@]}"; do
+				clean_line="$(echo -e "${line}" | sed 's/[[:space:]]*$//')"
+				if ! printf '%s\n' "${ADDED_ARR[@]}" | grep -Fxq "$clean_line"; then
+					NEW_REMOVED+=("$line")
+				fi
+			done
+
+			# terugzetten
+			ADDED=$(printf '%s\n' "${NEW_ADDED[@]}")
+			REMOVED=$(printf '%s\n' "${NEW_REMOVED[@]}")
+		fi
+
 		# Only include in changelog if there are added or removed rules
 		if [ -n "$ADDED" ] || [ -n "$REMOVED" ]; then
 			echo "### $name" >> "$TMP_ENTRY"

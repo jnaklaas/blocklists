@@ -1,19 +1,15 @@
-! Title: Anti Fingerprinting Blocklist
-! Description: Blocks common browser fingerprinting services
+! Title: Jnaklaas Anti Fingerprinting Blocklist
+! Description: Blocks common browser and de fingerprinting services
+! Purpose: Block browser/device fingerprinting frameworks
 ! Version: 2026.03.13 (34 rules)
 ! Last modified: 13 Mar 2026 14:22 UTC
 ! Homepage: https://github.com/jnaklaas/blocklists
 ! License: MIT
 
-! Example rule
+! ============================================================
+! BROWSER FINGERPRINTING FRAMEWORKS
+! ============================================================
 
-! ================================
-! ANTI FINGERPRINTING RULESET
-! ================================
-
-! ----------------
-! Browser fingerprint collectors
-! ----------------
 ||fingerprintjs.com^
 ||fpjs.io^
 ||cdn.fpjs.io^
@@ -22,57 +18,198 @@
 ||cdn.segment.com^
 ||api.segment.io^
 
-! ----------------
-! Canvas fingerprinting frameworks
-! ----------------
+||cdn.fingerprint.com^
+||collector.fingerprint.com^
+||devicefingerprint.com^
+||metrics.fpjs.io^
+||api.fpjs.io^
+||fp-cdn.azureedge.net^
+||fingerprint-cdn.azureedge.net^
+||fp-ns.azureedge.net^
+||collector-px.perimeterx.net^
+||fingerprint-client.arkoselabs.com^
+||client-api.arkoselabs.com^
+||identity.riskified.com^
+||device.iovation.com^
+||mpsnare.iesnare.com^
+
+
+! ============================================================
+! FINGERPRINT TEST / IDENTIFICATION PLATFORMS
+! ============================================================
+
 ||amiunique.org^
 ||deviceinfo.me^
 ||browserleaks.com^
 ||pixelscan.net^
 
-! ----------------
-! Device intelligence services
-! ----------------
+||coveryourtracks.eff.org^
+||whoer.net^
+||ipleak.net^
+||browserprint.info^
+||browseraudit.com^
+||panopticlick.eff.org^
+
+
+! ============================================================
+! DEVICE INTELLIGENCE / IP PROFILING
+! ============================================================
+
 ||deviceinfo.io^
 ||deviceatlas.com^
 ||maxmind.com^
 ||ipinfo.io^
 ||ip-api.com^
 
-! ----------------
-! Session replay / behavior tracking
-! ----------------
+||ipdata.co^
+||ipregistry.co^
+||ipqualityscore.com^
+||ipgeolocation.io^
+||ip2location.com^
+||db-ip.com^
+||ipstack.com^
+||ipwhois.io^
+||proxycheck.io^
+||getipintel.net^
+||vpnapi.io^
+||iphub.info^
+
+
+! ============================================================
+! BOT DETECTION / FRAUD DETECTION SERVICES
+! ============================================================
+
+||perimeterx.net^
+||px-cloud.net^
+||pxchk.net^
+||px-client.net^
+||pximg.net^
+||datadome.co^
+||captcha-delivery.com^
+||kasada.io^
+||arkoselabs.com^
+||sift.com^
+||riskified.com^
+||forter.com^
+||seon.io^
+||iovation.com^
+||kount.net^
+||shape.security^
+||fingerprint.com^
+
+
+! ============================================================
+! SESSION REPLAY / USER BEHAVIOR RECORDING
+! ============================================================
+
 ||fullstory.com^
 ||hotjar.com^
 ||static.hotjar.com^
 ||mouseflow.com^
 ||luckyorange.com^
 
-! ----------------
-! Behavioral analytics
-! ----------------
+||contentsquare.net^
+||smartlook.com^
+||inspectlet.com^
+||sessioncam.com^
+||glassboxdigital.io^
+||quantummetric.com^
+||decibelinsight.net^
+||clicktale.net^
+||logrocket-assets.io^
+
+
+! ============================================================
+! BEHAVIORAL / PRODUCT ANALYTICS
+! ============================================================
+
 ||clarity.ms^
 ||cdn.clarity.ms^
 ||logrocket.com^
 ||cdn.logrocket.io^
 
-! ----------------
-! Advanced tracking CDNs
-! ----------------
+||heap.io^
+||heapanalytics.com^
+||amplitude.com^
+||cdn.amplitude.com^
+||api.amplitude.com^
+||posthog.com^
+||posthog.io^
+||rudderstack.com^
+||cdn.rudderlabs.com^
+||analytics.rudderstack.com^
+
+
+! ============================================================
+! EVENT TRACKING / ANALYTICS CDNs
+! ============================================================
+
 ||cdn.segment.io^
 ||api.mixpanel.com^
 ||cdn.mxpnl.com^
 
-! ----------------
-! Tracking beacons
-! ----------------
+||events.launchdarkly.com^
+||app.launchdarkly.com^
+||clientstream.launchdarkly.com^
+||statsigapi.net^
+||statsig.com^
+||ingest.sprig.com^
+||sprig.com^
+||pendo.io^
+||cdn.pendo.io^
+
+
+! ============================================================
+! REAL USER MONITORING (RUM) / TELEMETRY
+! ============================================================
+
+||rum.browser-intake-datadoghq.com^
+||browser-intake.logs.datadoghq.com^
+||cdn.datadoghq.com^
+||browser.sentry-cdn.com^
+||ingest.sentry.io^
+||sentry.io^
+||o33249.ingest.sentry.io^
+||bam.nr-data.net^
+||js-agent.newrelic.com^
+||collector.newrelic.com^
+||rum-http-intake.logs.datadoghq.com^
+||api.honeycomb.io^
+||browser-intake-honeycomb.io^
+
+
+! ============================================================
+! TELEMETRY / TRACKING BEACONS
+! ============================================================
+
 ||/collect?$third-party
 ||/track?$third-party
 ||/tracking?$third-party
 ||/telemetry?$third-party
 ||/beacon?$third-party
 
-! ----------------
-! 3rd party fonts
-! ----------------
+||/events?$third-party
+||/metrics?$third-party
+||/analytics?$third-party
+||/log?$third-party
+||/capture?$third-party
+||/record?$third-party
+||/session?$third-party
+
+
+! ============================================================
+! WEBRTC / IP DISCOVERY / LEAK TESTS
+! ============================================================
+
+||webrtc.ecl.ntt.com^
+||webrtc.exposed^
+||test.webrtc.org^
+||browserrtc.com^
+||diafygi.github.io/webrtc-ips^
+
+
+! ============================================================
+! THIRD-PARTY FONTS (FINGERPRINTING SURFACE)
+! ============================================================
+
 *$font,third-party
