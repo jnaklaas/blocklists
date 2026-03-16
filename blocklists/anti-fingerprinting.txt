@@ -1,8 +1,8 @@
 ! Title: Jnaklaas Anti Fingerprinting Blocklist
 ! Description: Blocks common browser and de fingerprinting services
 ! Purpose: Block browser/device fingerprinting frameworks
-! Version: 2026.03.13 (34 rules)
-! Last modified: 13 Mar 2026 14:22 UTC
+! Version: 2026.03.16 (136 rules)
+! Last modified: 16 Mar 2026 13:59 UTC
 ! Homepage: https://github.com/jnaklaas/blocklists
 ! License: MIT
 
