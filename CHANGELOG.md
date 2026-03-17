@@ -7,6 +7,31 @@ and this project uses **date-based versioning**.
 
 <!-- HEADER_END -->
 
+## [2026.03.17]
+
+### anti-fingerprinting.txt
+
+- Better 3rd party font blocking.
+- Added CSS blocking for known providers.
+- Generic font blocking less strict (blocked 1p fonts in some edge cases).
+
+#### Added
+
+- `||*$font,third-party`
+- `||use.typekit.net^`
+- `||p.typekit.net^`
+- `||fast.fonts.net^`
+- `||cdn.jsdelivr.net/npm/@fontawesome^`
+- `||fonts.cdnfonts.com^`
+- `||brick.freetype.org^`
+- `||fonts.webtype.com^`
+- `||cdn.materialdesignicons.com^`
+- `||cdnjs.cloudflare.com/ajax/libs/font-awesome^`
+
+#### Removed
+
+- `*$font,third-party`
+
 ## [2026.03.16]
 
 ### anti-fingerprinting.txt

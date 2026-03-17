@@ -209,7 +209,16 @@
 
 
 ! ============================================================
-! THIRD-PARTY FONTS (FINGERPRINTING SURFACE)
+! THIRD-PARTY FONTS AND CSS (FINGERPRINTING SURFACE)
 ! ============================================================
 
-*$font,third-party
+||*$font,third-party
+||use.typekit.net^
+||p.typekit.net^
+||fast.fonts.net^
+||cdn.jsdelivr.net/npm/@fontawesome^
+||fonts.cdnfonts.com^
+||brick.freetype.org^
+||fonts.webtype.com^
+||cdn.materialdesignicons.com^
+||cdnjs.cloudflare.com/ajax/libs/font-awesome^
