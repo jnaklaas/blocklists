@@ -1,8 +1,8 @@
 ! Title: Jnaklaas Google Ultra Strict Blocklist
 ! Description: Blocks Google ads, telemetry, analytics, YouTube tracking, Recaptcha and CDN tracking.
 ! Purpose: block Google tracking outside Google services
-! Version: 2026.03.16 (177 rules)
-! Last modified: 16 Mar 2026 13:59 UTC
+! Version: 2026.03.17 (177 rules)
+! Last modified: 17 Mar 2026 13:27 UTC
 ! Homepage: https://github.com/jnaklaas/blocklists
 ! License: MIT
 
