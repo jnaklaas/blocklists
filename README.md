@@ -74,6 +74,16 @@ This strict approach is **exactly why many other filter lists fall short** — t
 
 If you have **specific use-cases** or need less aggressive blocking, you are welcome to **open an issue or pull request**. I might consider creating a **split version** with milder rules for compatibility while keeping the main lists ultra-strict.
 
+## Privacy Disclaimer
+
+These blocklists are designed to significantly reduce tracking, telemetry, ads, and browser fingerprinting. The primary privacy benefits come from blocking tracking scripts, analytics endpoints, ads, and behavioral fingerprinting services.
+
+**Potential theoretical risk:**
+Some highly targeted, self-hosted fingerprinting scripts could detect the absence of certain fonts or external resources and use this as a minor signal. However, this risk is small compared to the overall reduction in tracking and fingerprinting achieved by the blocklists. Privacy-focused browsers like Brave and Mullvad further mitigate such signals.
+
+**Conclusion:**
+One could say that the privacy gains outweigh any theoretical unique signal caused by font or CDN blocking. Using these blocklists could provide a safer, more private browsing experience by dramatically reducing exposure to trackers and fingerprinting vectors.
+
 ## Contributions
 
 Pull requests and improvements are welcome.
