@@ -7,6 +7,22 @@ and this project uses **date-based versioning**.
 
 <!-- HEADER_END -->
 
+## [2026.06.26]
+
+### google-ultra-strict.txt
+
+#### Added
+- `||gstatic.com/recaptcha^`
+- `||google.com/recaptcha^`
+- `||recaptcha.net^`
+
+#### Removed
+- `||gstatic.com/recaptcha^$important`
+- `||google.com/recaptcha^$important`
+- `||recaptcha.net^$important`
+
+
+
 ## [2026.03.17]
 
 ### anti-fingerprinting.txt
