@@ -277,9 +277,9 @@
 ! RECAPTCHA
 ! ============================================================
 
-||gstatic.com/recaptcha^$important
-||google.com/recaptcha^$important
-||recaptcha.net^$important
+||gstatic.com/recaptcha^
+||google.com/recaptcha^
+||recaptcha.net^
 ||www.recaptcha.net^
 
 
